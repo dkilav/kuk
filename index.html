@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Многостраничный сайт</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="alpine.js" defer></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.0/dist/cdn.min.js"></script>
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="max-w-9xl w-full mx-auto">
+    <header x-data="{ open: false }">
+      <nav class="navbar flex justify-between px-12 max-w-9xl mx-auto">
+        <div class="navbar-brand">
+           <a href="#" class="navbar-item text-4xl text-blue-500 font-bold italic">Логотип</a> 
+          <p href="#" class='navbar-burger' @click='open = !open'>
+            <span></span>
+            <span></span>
+            <span></span>
+          </p>
+        </div>
+        <div class="navbar-menu" :class="{ 'is-active': open }">
+          <div class="navbar-end space-x-4 hidden lg:flex  text-3xl text-red-500 font-bold italic">
+            <a href="#" class="navbar-item">Главная</a>
+            <a href="#" class="navbar-item">О нас</a>
+            <a href="#" class="navbar-item">Услуги</a>
+            <a href="#" class="navbar-item">Контакты</a>
+          </div> 
+        </div>
+      </nav>
+    </header>
+
+    <!-- Остальное содержимое страницы -->
+    <main class="max-w-9xl w-full mx-auto space-y-10">
+      <section class="max-w-7xl mx-auto">
+       <div class="grid md:grid-cols-3 sm:grid-cols-1 max-w-5xl mx-auto justify-center gap-4">
+        <img src="/src/img/1.png" class="mx-auto" alt="">
+        <img src="/src/img/2.png" class="mx-auto" alt="">
+        <img src="/src/img/3.png" class="mx-auto" alt="">
+       </div>
+      </section>
+      <section class="bg-blue-500 flex justify-center mx-auto p-12 h-[1000px]">Doy</section>
+      <section class="bg-yellow-500 flex justify-center mx-auto p-12 h-[1000px]">Trey</section>
+      <section class="bg-green-500 flex justify-center mx-auto p-12 h-[1000px]">Patru</section>
+    </main>
+
+    <script>
+      // Дополнительные скрипты, если необходимо
+    </script>
+  </div>
+
+  <script src="/src/js/app.js"></script>
+</body>
+
+</html>
